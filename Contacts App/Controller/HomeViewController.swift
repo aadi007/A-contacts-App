@@ -11,8 +11,11 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    var viewModel: ContactsViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = ContactsViewModel(sender: self)
     }
 
     override func didReceiveMemoryWarning() {
