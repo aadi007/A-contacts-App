@@ -16,36 +16,11 @@ import ObjectMapper
 enum Router: URLRequestConvertible {
     
     // Custom variable defined in build.
-    static let baseURLString = Helper.apiBaseUrl
+    static let baseURLString = ContactsHelper.apiBaseUrl
     
-    case userRouterManager(LoginRouter)
-    case registerRouterManager(RegisterRouter)
-    case otpRouterManager(SPOTPRouter)
-    case countryStateRouterManager(SPCountryStateRouter)
-    case modulesRouterManager(SPModuleRouter)
-    case userInterestManager(SPUserInterestRouter)
-    case userProfileManager(SPUserProfileRouter)
-    case venueRouterManager(VenueRouter)
-    case venueBookingRouterManager(SPBookingRouter)
-    case venueDetailsRouterManager(VenueDetailRouter)
-    case venueReviewRouterManager(VenueReviewRouter)
-    case searchRouterManager(SPSearchRouter)
-    case aboutUsRouterManager(SPAboutUsRouter)
-    case yourBookingsRouterManager(SPYourBookingsRouter)
-    case checkoutRouterManager(SPCheckoutRouter)
-    case notificationsRouterManager(SPNotificationsRouter)
-    case yourFavouritesRouterManager(SPYourFavouritesRouter)
-    case yourReviewsRouterManager(SPYourReviewsRouter)
-    case businessListRouterManager(BusinessListRouter)
-    case suggestServiceRouterManager(SuggestServiceRouter)
-    case spMatchRouterManager(SPMatchRouter)
-    case spYourBuddiesRouterManager(SPYourBuddiesRouter)
-    case yourGameRouterManager(YourGameRouter)
-    case yourRecentlyViewedRouterManager(SPYourRecentlyViewedRouter)
-    case settingsRouterManager(SPSettingsRouter)
-    case spPackagesRouterManager(SPPackagesRouter)
+    case contactsRouterManager(LoginRouter)
     
-    var URLRequest: NSMutableURLRequest {
+    public func asURLRequest() -> URLRequest {
         switch self {
             case .UserRouterManager(let requset):
                 let urlRequest = configureRequest(requset)
@@ -174,7 +149,6 @@ enum Router: URLRequestConvertible {
         let mutableURLRequest = NSMutableURLRequest(URL: url.URLByAppendingPathComponent(requestObj.path)!) // Set request path
         mutableURLRequest.HTTPMethod = requestObj.method.rawValue // Set request method
         
-        setAuthorizationHeaderField(mutableURLRequest)
         mutableURLRequest.setValue("application/json", forHTTPHeaderField:"Accept")
         mutableURLRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type")
         mutableURLRequest.setValue("IPhone", forHTTPHeaderField:"User-Agent")
@@ -234,22 +208,6 @@ enum Router: URLRequestConvertible {
             return mutableURLRequest
         }
     }
-
-    
-    /**
-     
-     Checks for the auth token stored in the persitent storage and assign to the headers of the NSURLRequest
-     
-     - parameter mutableURLRequest: NSMutableRequest for which authorization needs to be set
-     */
-    func setAuthorizationHeaderField(_ mutableURLRequest : NSMutableURLRequest) {
-        mutableURLRequest.setValue(Helper.apiToken, forHTTPHeaderField: "X-Auth-Token")
-        if let user = SPUser.getUser() {
-            if let accessToken = user.accessToken {
-                mutableURLRequest.setValue(accessToken, forHTTPHeaderField: "X-Auth-User-Token")
-            }
-        }
-    }
 }
 
 // MARK: - Alamofire request extension
@@ -260,7 +218,7 @@ extension Request {
         print("===============")
         print(self)
         print("Headers ---> ")
-        print(self.request!.allHTTPHeaderFields)
+        print(self.request!.allHTTPHeaderFields!)
         print("Body ---> ")
         if let requestBody = self.request!.HTTPBody {
             print(NSString(data: requestBody, encoding: NSUTF8StringEncoding))

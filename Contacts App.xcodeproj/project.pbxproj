@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		21F59C2C1E86270A007A0402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C2B1E86270A007A0402 /* AppDelegate.swift */; };
-		21F59C2E1E86270A007A0402 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C2D1E86270A007A0402 /* ViewController.swift */; };
 		21F59C311E86270A007A0402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F59C2F1E86270A007A0402 /* Main.storyboard */; };
 		21F59C331E86270A007A0402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F59C321E86270A007A0402 /* Assets.xcassets */; };
 		21F59C361E86270A007A0402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F59C341E86270A007A0402 /* LaunchScreen.storyboard */; };
 		21F59C411E86270A007A0402 /* Contacts_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C401E86270A007A0402 /* Contacts_AppTests.swift */; };
 		21F59C4C1E86270A007A0402 /* Contacts_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C4B1E86270A007A0402 /* Contacts_AppUITests.swift */; };
+		21F59C691E864076007A0402 /* RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C671E864076007A0402 /* RequestBody.swift */; };
+		21F59C6A1E864076007A0402 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C681E864076007A0402 /* RouterProtocol.swift */; };
+		21F59C6C1E86414E007A0402 /* ContactsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C6B1E86414E007A0402 /* ContactsHelper.swift */; };
+		21F59C711E86437E007A0402 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C701E86437E007A0402 /* HomeViewController.swift */; };
 		3F87CBFBE34FC2B19941F9BA /* Pods_Contacts_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72103E94EE2C5EFE39681AC /* Pods_Contacts_AppTests.framework */; };
 		57F212B3FC6B5D6D4340C3C4 /* Pods_Contacts_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AD219CF3E30C6FE4747834 /* Pods_Contacts_App.framework */; };
 		6E637C8D85F41A6034F73C49 /* Pods_Contacts_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F3B2269DCE5D9455CF34F2 /* Pods_Contacts_AppUITests.framework */; };
@@ -41,7 +44,6 @@
 		19944FC0BB4CFA09F55113F0 /* Pods-Contacts AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts AppTests/Pods-Contacts AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		21F59C281E86270A007A0402 /* Contacts App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F59C2B1E86270A007A0402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21F59C2D1E86270A007A0402 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21F59C301E86270A007A0402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21F59C321E86270A007A0402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21F59C351E86270A007A0402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +54,10 @@
 		21F59C471E86270A007A0402 /* Contacts AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Contacts AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21F59C4B1E86270A007A0402 /* Contacts_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts_AppUITests.swift; sourceTree = "<group>"; };
 		21F59C4D1E86270A007A0402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21F59C671E864076007A0402 /* RequestBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBody.swift; sourceTree = "<group>"; };
+		21F59C681E864076007A0402 /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		21F59C6B1E86414E007A0402 /* ContactsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsHelper.swift; sourceTree = "<group>"; };
+		21F59C701E86437E007A0402 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		40AD219CF3E30C6FE4747834 /* Pods_Contacts_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F3B2269DCE5D9455CF34F2 /* Pods_Contacts_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A097E63B2BCFAE06DF8FA3A /* Pods-Contacts AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts AppUITests/Pods-Contacts AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,8 +130,11 @@
 		21F59C2A1E86270A007A0402 /* Contacts App */ = {
 			isa = PBXGroup;
 			children = (
+				21F59C5F1E863FC8007A0402 /* Common */,
+				21F59C6D1E864348007A0402 /* Controller */,
+				21F59C6E1E864348007A0402 /* Model */,
+				21F59C6F1E864348007A0402 /* View */,
 				21F59C2B1E86270A007A0402 /* AppDelegate.swift */,
-				21F59C2D1E86270A007A0402 /* ViewController.swift */,
 				21F59C2F1E86270A007A0402 /* Main.storyboard */,
 				21F59C321E86270A007A0402 /* Assets.xcassets */,
 				21F59C341E86270A007A0402 /* LaunchScreen.storyboard */,
@@ -150,6 +159,62 @@
 				21F59C4D1E86270A007A0402 /* Info.plist */,
 			);
 			path = "Contacts AppUITests";
+			sourceTree = "<group>";
+		};
+		21F59C5F1E863FC8007A0402 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				21F59C651E864076007A0402 /* Helper */,
+				21F59C661E864076007A0402 /* Protocol */,
+				21F59C601E863FC8007A0402 /* Router */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		21F59C601E863FC8007A0402 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		21F59C651E864076007A0402 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				21F59C6B1E86414E007A0402 /* ContactsHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		21F59C661E864076007A0402 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				21F59C671E864076007A0402 /* RequestBody.swift */,
+				21F59C681E864076007A0402 /* RouterProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		21F59C6D1E864348007A0402 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21F59C701E86437E007A0402 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		21F59C6E1E864348007A0402 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21F59C6F1E864348007A0402 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		597D0AD0547606CDC6EF19B3 /* Pods */ = {
@@ -436,7 +501,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F59C2E1E86270A007A0402 /* ViewController.swift in Sources */,
+				21F59C711E86437E007A0402 /* HomeViewController.swift in Sources */,
+				21F59C6A1E864076007A0402 /* RouterProtocol.swift in Sources */,
+				21F59C6C1E86414E007A0402 /* ContactsHelper.swift in Sources */,
+				21F59C691E864076007A0402 /* RequestBody.swift in Sources */,
 				21F59C2C1E86270A007A0402 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
