@@ -19,6 +19,24 @@ class ContactsViewModel: NSObject {
     
     // calls the Api call to get all the Contacts and returns back to sender
     func getAllContacts() {
-        Alamofire.request("https://httpbin.org/post", method: .post)
+        Alamofire.request(Router.contactsRouterManager(ContactsRouter.getAllContacts()))
+            .debugLog()
+            .validate()
+            .responseJSON {
+                (response) in
+//                if response.result.isFailure {
+//                    handleError(response,
+//                                successHandler:{
+//                                    res in
+//                                    successCompletionHandler(res: res)
+//                    },
+//                                errorhandler:{
+//                                    errorCompletionHandler()
+//                    })
+//                } else {
+//                    successCompletionHandler(res: response)
+//                }
+                print("\(response)")
+        }
     }
 }

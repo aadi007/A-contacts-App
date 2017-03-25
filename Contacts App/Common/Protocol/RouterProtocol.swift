@@ -22,7 +22,7 @@ protocol RouterProtocolAPI {
     
     var path: String { get }
     
-    var method: Alamofire.Method { get }
+    var method: Alamofire.HTTPMethod { get }
     
     var parameters: APIRequestBody? { get }
     

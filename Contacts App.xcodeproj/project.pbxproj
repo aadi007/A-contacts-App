@@ -20,6 +20,7 @@
 		21F59C731E864731007A0402 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C721E864731007A0402 /* ContactsViewModel.swift */; };
 		21F59C751E864F35007A0402 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C741E864F35007A0402 /* Contact.swift */; };
 		21F59C781E865033007A0402 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C771E865033007A0402 /* ContactsRouter.swift */; };
+		21F59C7A1E8652F6007A0402 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F59C791E8652F6007A0402 /* Router.swift */; };
 		3F87CBFBE34FC2B19941F9BA /* Pods_Contacts_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72103E94EE2C5EFE39681AC /* Pods_Contacts_AppTests.framework */; };
 		57F212B3FC6B5D6D4340C3C4 /* Pods_Contacts_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AD219CF3E30C6FE4747834 /* Pods_Contacts_App.framework */; };
 		6E637C8D85F41A6034F73C49 /* Pods_Contacts_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F3B2269DCE5D9455CF34F2 /* Pods_Contacts_AppUITests.framework */; };
@@ -64,6 +65,7 @@
 		21F59C721E864731007A0402 /* ContactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		21F59C741E864F35007A0402 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		21F59C771E865033007A0402 /* ContactsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsRouter.swift; sourceTree = "<group>"; };
+		21F59C791E8652F6007A0402 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		40AD219CF3E30C6FE4747834 /* Pods_Contacts_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F3B2269DCE5D9455CF34F2 /* Pods_Contacts_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A097E63B2BCFAE06DF8FA3A /* Pods-Contacts AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts AppUITests/Pods-Contacts AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		21F59C601E863FC8007A0402 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				21F59C791E8652F6007A0402 /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				21F59C731E864731007A0402 /* ContactsViewModel.swift in Sources */,
 				21F59C6A1E864076007A0402 /* RouterProtocol.swift in Sources */,
 				21F59C6C1E86414E007A0402 /* ContactsHelper.swift in Sources */,
+				21F59C7A1E8652F6007A0402 /* Router.swift in Sources */,
 				21F59C691E864076007A0402 /* RequestBody.swift in Sources */,
 				21F59C2C1E86270A007A0402 /* AppDelegate.swift in Sources */,
 				21F59C751E864F35007A0402 /* Contact.swift in Sources */,

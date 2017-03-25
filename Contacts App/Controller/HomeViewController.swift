@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = ContactsViewModel(sender: self)
+        viewModel.getAllContacts()
     }
 
     override func didReceiveMemoryWarning() {
